@@ -8,13 +8,19 @@
 [![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?logo=redis&logoColor=white)](https://redis.io/)
 [![License](https://img.shields.io/badge/Academic_Project-UTCN_DISI-003366.svg)](https://ac.utcluj.ro/)
 
-> **Note on Collaboration:** Academic team project developed for the *Dezvoltarea Interfețelor și Sistemelor Interactive (DISI)* course at the **Technical University of Cluj-Napoca (TUCN)**. Forked from the course organization repository [DISI2025/30641_Ghilea_Lucian_SocialPlatform](https://github.com/DISI2025/30641_Ghilea_Lucian_SocialPlatform), showcasing 180+ team commits, Agile sprint deliveries, and 80+ peer-reviewed Pull Requests.
+> **Academic Team Context:** Project developed for the *Dezvoltarea Interfețelor și Sistemelor Interactive (DISI)* course at the **Technical University of Cluj-Napoca (TUCN)**. Forked from the course organization repository [DISI2025/30641_Ghilea_Lucian_SocialPlatform](https://github.com/DISI2025/30641_Ghilea_Lucian_SocialPlatform).
+> 
+> **Team 404NotFound Roles & Contributions:**
+> - **Dan Lucian Ghilea** — *Scrum Master (Agile sprint planning, backlog management, sprint reviews & presentations)*
+> - **Andreea Dance** — *Frontend Engineer (React 19 SPA, UI components, client-side routing)*
+> - **Andreas Frăticiu** — *Backend & Database Engineer (FastAPI REST API, PostgreSQL, Neo4j social graph)*
+> - **David Iakaboș** — *Backend & Infrastructure Engineer (Redis caching, session management & tests)*
 
 ---
 
 An end-to-end social networking platform built with a decoupled **React 19 SPA** frontend and an asynchronous **FastAPI** backend. 
 
-The project features a **multi-database architecture**: **PostgreSQL** for relational user data, **Neo4j** for graph traversal of friendships and social recommendations, and **Redis** for in-memory session management and sub-millisecond profile caching.
+The project features a **multi-database architecture**: **PostgreSQL** for relational user data, **Neo4j** for graph traversal of friendships and social recommendations, and **Redis** for in-memory session management and profile caching.
 
 ---
 
@@ -165,9 +171,14 @@ The application will open automatically in your browser at `http://localhost:300
 
 ---
 
-## Authors & Academic Context
+## 👥 Authors & Academic Context
 
-- **Dan Lucian Ghilea** — *Lead Developer / Full-Stack Engineer*
+**Team 404NotFound:**
+- **Dan Lucian Ghilea** — *Scrum Master & Team Coordination*
+- **Andreea Dance** — *Frontend Engineer (React 19)*
+- **Andreas Frăticiu** — *Backend & Database Engineer (FastAPI, PostgreSQL, Neo4j)*
+- **David Iakaboș** — *Backend & Infrastructure Engineer (Redis)*
+
 - **Course**: *Dezvoltarea Interfețelor și Sistemelor Interactive (DISI)*
 - **Institution**: Technical University of Cluj-Napoca (TUCN), Faculty of Automation and Computer Science
 
