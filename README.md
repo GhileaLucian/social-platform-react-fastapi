@@ -18,25 +18,25 @@ The project features a **multi-database architecture**: **PostgreSQL** for relat
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```mermaid
 graph TD
-    User["👤 Client Browser"] -->|"HTTP / REST API"| React["⚛️ React SPA (Port 3000)<br>• React Router • Axios • Component State"]
-    React -->|"Asynchronous Requests"| API["⚡ FastAPI Gateway (Port 8000)<br>• CORS • Pydantic Validation • Bcrypt Auth"]
+    User["Client Browser"] -->|"HTTP / REST API"| React["React SPA (Port 3000)<br>• React Router • Axios • Component State"]
+    React -->|"Asynchronous Requests"| API["FastAPI Gateway (Port 8000)<br>• CORS • Pydantic Validation • Bcrypt Auth"]
     
     subgraph Storage & Persistence Tier
-        API -->|"Relational Data (Users, Posts, Albums)"| PG[("🐘 PostgreSQL (SQLAlchemy ORM)")]
-        API -->|"Social Network Graph (Friends, Connections)"| Neo[("🕸️ Neo4j Graph Database (Cypher)")]
-        API -->|"Session Store & Fast Profile Cache"| Redis[("⚡ Redis In-Memory Store")]
+        API -->|"Relational Data (Users, Posts, Albums)"| PG[("PostgreSQL (SQLAlchemy ORM)")]
+        API -->|"Social Network Graph (Friends, Connections)"| Neo[("Neo4j Graph Database (Cypher)")]
+        API -->|"Session Store & Fast Profile Cache"| Redis[("Redis In-Memory Store")]
     end
 ```
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### ⚛️ Frontend (React Single-Page Application)
+### Frontend (React Single-Page Application)
 - **Interactive Chat Interface (`ChatPage.js`)**: Direct messaging between users, conversation switching, new chat modal, and message thread history.
 - **Dynamic Social Newsfeed**: Personalized feed displaying user posts, captions, timestamps, and attached media.
 - **Photo Albums & Gallery (`Album.js`)**: Multi-photo uploading, image browsing, and album categorization.
@@ -44,7 +44,7 @@ graph TD
 - **Profile Customization (`Profile.js`, `ProfileUpdate.js`)**: Bio editing, avatar picture upload, and personalized stats.
 - **Responsive Navigation & Routing**: Client-side routing managed through `react-router-dom` with modular styling.
 
-### ⚡ Backend (FastAPI Asynchronous Services)
+### Backend (FastAPI Asynchronous Services)
 - **Multi-Database Persistence Layer**:
   - **PostgreSQL**: Stores relational models (`User`, `Foto`, `AlbumPhoto`, `Message`, `Conversation`) with SQLAlchemy 2.0 ORM.
   - **Neo4j Graph Database**: Models social relations as nodes and directed edges for efficient friendship queries and mutual friend discovery.
@@ -60,7 +60,7 @@ graph TD
 
 ---
 
-## 🛠️ Tech Stack & Technologies
+## Tech Stack & Technologies
 
 | Layer | Technologies |
 | :--- | :--- |
@@ -73,7 +73,7 @@ graph TD
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 social-platform-fullstack/
@@ -115,7 +115,7 @@ social-platform-fullstack/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js** (v18+ recommended) and **npm**
@@ -165,7 +165,7 @@ The application will open automatically in your browser at `http://localhost:300
 
 ---
 
-## 👥 Authors & Academic Context
+## Authors & Academic Context
 
 - **Dan Lucian Ghilea** — *Lead Developer / Full-Stack Engineer*
 - **Course**: *Dezvoltarea Interfețelor și Sistemelor Interactive (DISI)*
@@ -173,6 +173,6 @@ The application will open automatically in your browser at `http://localhost:300
 
 ---
 
-## 📄 License
+## License
 
 This repository is maintained for educational, portfolio, and demonstration purposes.
