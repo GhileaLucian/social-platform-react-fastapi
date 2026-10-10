@@ -1,4 +1,4 @@
-# Full-Stack Social Platform · React & FastAPI
+# Full-Stack Social Platform · React 19 & FastAPI
 
 [![React](https://img.shields.io/badge/Frontend-React%2019-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -8,11 +8,13 @@
 [![Redis](https://img.shields.io/badge/Cache-Redis-DC382D?logo=redis&logoColor=white)](https://redis.io/)
 [![License](https://img.shields.io/badge/Academic_Project-UTCN_DISI-003366.svg)](https://ac.utcluj.ro/)
 
-An end-to-end, high-performance social networking web platform built with a decoupled **React SPA** frontend and an asynchronous **FastAPI** backend. 
+> **Note on Collaboration:** Academic team project developed for the *Dezvoltarea Interfețelor și Sistemelor Interactive (DISI)* course at the **Technical University of Cluj-Napoca (TUCN)**. Forked from the course organization repository [DISI2025/30641_Ghilea_Lucian_SocialPlatform](https://github.com/DISI2025/30641_Ghilea_Lucian_SocialPlatform), showcasing 180+ team commits, Agile sprint deliveries, and 80+ peer-reviewed Pull Requests.
 
-The project features a **polyglot persistence architecture**: **PostgreSQL** for relational entities, **Neo4j** for graph traversal of friendships and social networks, and **Redis** for in-memory session storage and sub-millisecond profile caching.
+---
 
-Developed as part of the *Dezvoltarea Interfețelor și Sistemelor Interactive (DISI)* curriculum at the **Technical University of Cluj-Napoca (UTCN)**, Faculty of Automation and Computer Science.
+An end-to-end social networking platform built with a decoupled **React 19 SPA** frontend and an asynchronous **FastAPI** backend. 
+
+The project features a **multi-database architecture**: **PostgreSQL** for relational user data, **Neo4j** for graph traversal of friendships and social recommendations, and **Redis** for in-memory session management and sub-millisecond profile caching.
 
 ---
 
@@ -35,21 +37,24 @@ graph TD
 ## ✨ Key Features
 
 ### ⚛️ Frontend (React Single-Page Application)
-- **Interactive Chat Interface (`ChatPage.js`)**: Real-time direct messaging between users, active conversation switching, and live message history.
+- **Interactive Chat Interface (`ChatPage.js`)**: Direct messaging between users, conversation switching, new chat modal, and message thread history.
 - **Dynamic Social Newsfeed**: Personalized feed displaying user posts, captions, timestamps, and attached media.
 - **Photo Albums & Gallery (`Album.js`)**: Multi-photo uploading, image browsing, and album categorization.
 - **Friend Discovery & Management (`FriendsList.js`)**: Search directory, pending friend requests management, and mutual connections view.
 - **Profile Customization (`Profile.js`, `ProfileUpdate.js`)**: Bio editing, avatar picture upload, and personalized stats.
-- **Responsive Navigation & Routing**: Client-side routing managed through `react-router-dom` with protected view logic.
+- **Responsive Navigation & Routing**: Client-side routing managed through `react-router-dom` with modular styling.
 
 ### ⚡ Backend (FastAPI Asynchronous Services)
-- **Polyglot Persistence Layer**:
+- **Multi-Database Persistence Layer**:
   - **PostgreSQL**: Stores relational models (`User`, `Foto`, `AlbumPhoto`, `Message`, `Conversation`) with SQLAlchemy 2.0 ORM.
   - **Neo4j Graph Database**: Models social relations as nodes and directed edges for efficient friendship queries and mutual friend discovery.
   - **Redis Cache**: Caches serialized user profiles and manages session state to eliminate redundant relational database queries.
 - **Robust Security & Authentication**:
   - Bcrypt password hashing (`passwords.py`).
   - Account registration, credential verification, and secure password reset flow.
+- **Automated Testing Suite**:
+  - Pytest integration suite verifying API endpoints (`test_profile.py`, `test_reset.py`).
+  - Redis cache lifecycle and TTL expiry tests (`test_cache_profile.py`, `test_expiry.py`).
 - **Strict Data Validation**: Pydantic v2 schemas for all request payloads and response serialization.
 - **Modular Routers**: Clean separation of concerns with dedicated routers for `users`, `albums`, and `messages`.
 
